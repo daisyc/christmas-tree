@@ -6,8 +6,8 @@
 // The tree is a polygon that can be decorated with ornaments using mouse clicks. 
 // The default color for ornaments is red. The number in the top left corner is a count 
 // of the ornaments. The buttons labeled Blue and Red determine the color of ornaments. 
-// The buttons labeled Start and Stop implement a light show. When “Start” is pressed the 
-// lights blink. When “Stop” is pressed the blinking stops. New ornaments can be added 
+// The buttons labeled Start and Stop implement a light show. When Start is pressed the
+// lights blink. When Stop is pressed the blinking stops. New ornaments can be added 
 // during a light show. 
 //
 // Supplementary files: Ornament.java is needed to plot the ornaments.
@@ -40,7 +40,7 @@ public class TreePanel extends JPanel implements ActionListener {
 	private int[] yArr = {TOP_Y, TOP_Y+80, TOP_Y+80, TOP_Y+160, TOP_Y+160, TOP_Y+240, 
 			TOP_Y+240, TOP_Y+160, TOP_Y+160, TOP_Y+80, TOP_Y+80};
 	private ArrayList<Ornament> orns;
-	private JButton blueButton = new JButton("Blue");
+	private JButton blueButton = new JButton("Yellow");
 	private JButton redButton = new JButton("Red");
 	private JButton startButton = new JButton("Start"); //button to start light show
 	private JButton stopButton = new JButton("Stop"); //button to stop light show
@@ -57,7 +57,7 @@ public class TreePanel extends JPanel implements ActionListener {
 		timer = new Timer(delay, this); //creates timer for the light show
 		
 	    blueButton.addActionListener(this);
-	    blueButton.setBackground(Color.blue);
+	    blueButton.setBackground(Color.yellow);
 	    blueButton.setOpaque(true);
 	    add(blueButton,BorderLayout.NORTH);
 	    
@@ -117,7 +117,7 @@ public class TreePanel extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent event) {
 		Object source = event.getSource();
 		if (source == blueButton){
-			clr = Color.blue;
+			clr = Color.yellow;
 		}
 		if (source == redButton){
 			clr = Color.red;
